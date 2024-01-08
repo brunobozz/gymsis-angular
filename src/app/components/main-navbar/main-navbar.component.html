@@ -1,0 +1,14 @@
+<nav class="navbar navbar-dark bg-primary">
+  <div class="container-fluid">
+    <div class="text-white ms-2" routerLink="/home">
+      <i class="fa fa-grav"></i>
+      <span> GYMSIS</span>
+    </div>
+
+    <i
+      class="text-light cursor-pointer m-2 fa fa-fw"
+      [ngClass]="{ 'fa-bars': opened == false, 'fa-times': opened == true }"
+      (click)="toggleMenu()"
+    ></i>
+  </div>
+</nav>

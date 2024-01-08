@@ -1,0 +1,22 @@
+
+.menu {
+  position: fixed;
+  width: 260px;
+  top: 0;
+  left: -260px;
+  height: 100%;
+  z-index: 1050;
+  transition: all 0.3s ease-in-out;
+
+  &-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+  }
+}
+
+.opened {
+  left: 0;
+  box-shadow: 5px 0 10px rgba(0, 0, 0, 0.2);
+}

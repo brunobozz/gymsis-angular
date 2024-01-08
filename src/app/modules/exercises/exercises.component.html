@@ -1,0 +1,6 @@
+<section class="container">
+  <shared-route-title icon="fa-cube" text="Exercícios"></shared-route-title>
+  <exercises-modal-create #dialogCreate (refreshList)="list.getExercises()"></exercises-modal-create>
+  <exercises-actions (callDialog)="dialogCreate.showDialog()"></exercises-actions>
+  <exercises-list #list></exercises-list>
+</section>

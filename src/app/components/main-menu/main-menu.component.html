@@ -1,0 +1,25 @@
+<section class="menu bg-primary" [class.opened]="opened == true">
+  <nav class="navbar navbar-dark bg-primary">
+    <div class="m-4 d-flex flex-column align-items-center text-white w-100">
+      <img
+        class="menu-image"
+        src="https://media.licdn.com/dms/image/D4D03AQGNDqhKh2Y-OA/profile-displayphoto-shrink_200_200/0/1702991664840?e=1710374400&v=beta&t=nBJkI3Czdbt86jWTtuf7zmotjKUIZNfwZC-UWGCcXwc"
+        alt=""
+      />
+      <span class="fs-5 fw-light">Bruno Bozzetti</span>
+      <u class="small cursor-pointer" routerLink="/profile" (click)="toggleMenu()">Perfil</u>
+    </div>
+  </nav>
+
+  <div class="d-grid gap-2 me-2 ms-2">
+    <button
+      *ngFor="let item of menu"
+      class="btn btn-outline-white text-start"
+      [routerLink]="item.link"
+      (click)="toggleMenu()"
+    >
+      <i class="fa {{ item.icon }}"></i>
+      <span> {{ item.label }}</span>
+    </button>
+  </div>
+</section>

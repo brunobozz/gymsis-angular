@@ -1,0 +1,40 @@
+<p-dialog
+  [(visible)]="visible"
+  [style]="{ width: '90vw', 'max-width': '700px' }"
+  [modal]="true"
+  [draggable]="true"
+  [resizable]="false"
+>
+  <ng-template pTemplate="header">
+    <h4 class="mb-0">
+      <i class="fa fa-plus"></i>
+      <span> Criar Exercício</span>
+    </h4>
+  </ng-template>
+  <form [formGroup]="form" (ngSubmit)="submitForm()">
+    <div class="mb-3">
+      <!-- <label for="name" class="form-label small">Nome</label> -->
+      <input
+        type="text"
+        class="form-control"
+        formControlName="name"
+        placeholder="Nome"
+      />
+    </div>
+    <div class="mb-3">
+      <!-- <label for="type" class="form-label small">Tipo</label> -->
+      <input
+        type="text"
+        class="form-control"
+        formControlName="type"
+        placeholder="Tipo"
+      />
+    </div>
+    <div class="text-end">
+      <button class="btn btn-primary" type="submit">
+        <i class="fa fa-save"></i>
+        <span> Salvar</span>
+      </button>
+    </div>
+  </form>
+</p-dialog>
