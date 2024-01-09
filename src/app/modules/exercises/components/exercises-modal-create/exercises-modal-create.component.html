@@ -13,22 +13,32 @@
   </ng-template>
   <form [formGroup]="form" (ngSubmit)="submitForm()">
     <div class="mb-3">
-      <!-- <label for="name" class="form-label small">Nome</label> -->
+      <label for="name">Nome do Exercício</label>
       <input
         type="text"
-        class="form-control"
+        pInputText
         formControlName="name"
-        placeholder="Nome"
+        style="width: 100%"
       />
     </div>
     <div class="mb-3">
-      <!-- <label for="type" class="form-label small">Tipo</label> -->
-      <input
-        type="text"
-        class="form-control"
-        formControlName="type"
-        placeholder="Tipo"
-      />
+      <label for="name" class="mb-2">Categorias do Exercício</label>
+      <div class="d-flex flex-wrap">
+        <div
+          *ngFor="let category of categories"
+          class="me-2 mb-2 cursor-pointer"
+        >
+          <shared-category-chip
+            [category]="category"
+            (click)="setCategories(category.id)"
+            [ngStyle]="
+              !this.selectedCategories.includes(category.id)
+                ? { filter: 'grayscale(1) brightness(1.2)' }
+                : { filter: 'grayscale(0) brightness(1)' }
+            "
+          ></shared-category-chip>
+        </div>
+      </div>
     </div>
     <div class="text-end">
       <button class="btn btn-primary" type="submit">

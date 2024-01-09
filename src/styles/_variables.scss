@@ -5,12 +5,11 @@ $PEITO: #f75a5a !default;
 $GLUTEOS: #fc588f !default;
 $BICEPS: #6193ff !default;
 $TRICEPS: #8956ff !default;
-$ABDOMEN: #79ecec !default;
-$PERNA: #fc9eff !default;
+$ABDOME: #79ecec !default;
+$PERNAS: #fc9eff !default;
 $CARDIO: #23e9a7 !default;
 
-$g2green: #005b30 !default;
-
+$g2green: #009952 !default;
 
 //DEFAULT COLOR SYSTEM
 $white: #ffffff !default;
@@ -39,7 +38,7 @@ $primary: $blue;
 $secondary: $gray-600;
 
 $theme-colors: (
-  "primary": $g2green,
+  "primary": $blue,
   "secondary": $gray-600,
   "success": $green,
   "danger": $red,
@@ -52,8 +51,8 @@ $theme-colors: (
   "GLUTEOS": $GLUTEOS,
   "BICEPS": $BICEPS,
   "TRICEPS": $TRICEPS,
-  "ABDOMEN": $ABDOMEN,
-  "PERNA": $PERNA,
+  "ABDOME": $ABDOME,
+  "PERNAS": $PERNAS,
   "CARDIO": $CARDIO,
 );
 

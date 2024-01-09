@@ -6,5 +6,8 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./category-icon.component.scss'],
 })
 export class CategoryIconComponent {
-  @Input() category: string = '';
+  @Input() category: any;
+  @Input() size: string = '32px';
+  @Input() border: string = '4px solid #fff';
+  @Input() shadow: string = '0 0 5px rgba(0,0,0,0.2)';
 }

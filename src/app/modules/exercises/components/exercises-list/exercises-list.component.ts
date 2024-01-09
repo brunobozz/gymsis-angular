@@ -16,13 +16,14 @@ export class ExercisesListComponent {
   }
 
   public getExercises() {
-    this.backend.getData('exercises').subscribe((res: any) => {
+    this.backend.getData('exercise').subscribe((res: any) => {
+      console.log(res);
       this.exercises = res;
     });
   }
 
   public deleteExercise(id: any) {
-    this.backend.deleteData('exercises/', id).subscribe(() => {
+    this.backend.deleteData('exercise/', id).subscribe(() => {
       this.toastr.success('O exercício foi apagado', 'Feito!');
       this.getExercises();
     });

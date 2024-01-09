@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 //MODULES
 import { SharedModule } from '../shared/shared.module';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 //COMPONENTS
 import { ExercisesComponent } from './exercises.component';
@@ -14,6 +14,8 @@ import { ExercisesModalCreateComponent } from './components/exercises-modal-crea
 //PRIMENG
 import { DialogModule } from 'primeng/dialog';
 import { TableModule } from 'primeng/table';
+import { MultiSelectModule } from 'primeng/multiselect';
+import { InputTextModule } from 'primeng/inputtext';
 
 @NgModule({
   declarations: [
@@ -25,9 +27,12 @@ import { TableModule } from 'primeng/table';
   imports: [
     CommonModule,
     SharedModule,
+    FormsModule,
     ReactiveFormsModule,
     DialogModule,
     TableModule,
+    MultiSelectModule,
+    InputTextModule 
   ],
 })
 export class ExercisesModule {}

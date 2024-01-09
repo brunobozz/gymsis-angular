@@ -1,11 +1,12 @@
 <div
   class="category-icon bg-{{ category.code }}"
-  [style.border]="border"
+  [style.border]="borderStyle"
   [style.box-shadow]="shadow"
+  [style.border-radius]="size"
 >
   <img
     src="./assets/icons/fitness/{{ category.code }}.svg"
-    [style.width]="size"
     [style.height]="size"
   />
+  <span>{{ category.name }}</span>
 </div>

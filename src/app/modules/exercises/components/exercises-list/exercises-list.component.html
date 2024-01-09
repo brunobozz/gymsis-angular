@@ -1,19 +1,30 @@
-<div class="card mt-4">
-  <p-table [value]="exercises" styleClass="p-datatable-sm p-datatable-striped">
-    <ng-template pTemplate="body" let-exercise let-i="rowIndex">
-      <tr>
-        <td class="text-capitalize">{{ i + 1 }} - {{ exercise.name }}</td>
-        <td>
-          <div class="d-flex justify-content-end align-items-center">
-            <shared-category-icon
-              [category]="exercise.type | uppercase"
-            ></shared-category-icon>
-            <!-- <button class="btn btn-sm btn-danger">
+<div class="container">
+  <div class="card">
+    <p-table
+      [value]="exercises"
+      styleClass="p-datatable-sm p-datatable-striped"
+    >
+      <ng-template pTemplate="body" let-exercise let-i="rowIndex">
+        <tr>
+          <td class="text-capitalize">
+            <!-- <span>{{ i + 1 }} - </span> -->
+            <span>{{ exercise.name }}</span>
+          </td>
+          <td>
+            <div class="d-flex justify-content-end align-items-center">
+              <shared-category-icon
+                *ngFor="let category of exercise.categories"
+                [category]="category"
+                size="28px"
+                style="margin-left: -20px"
+              ></shared-category-icon>
+              <!-- <button class="btn btn-sm btn-danger">
               <i class="fa fa-trash" (click)="deleteExercise(exercise.id)"></i>
             </button> -->
-          </div>
-        </td>
-      </tr>
-    </ng-template>
-  </p-table>
+            </div>
+          </td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>
 </div>
