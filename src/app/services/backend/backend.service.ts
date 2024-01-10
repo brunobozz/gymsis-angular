@@ -1,27 +1,31 @@
-import { Injectable } from "@angular/core";
-import { HttpClient } from "@angular/common/http";
+import { Injectable } from '@angular/core';
+import { HttpClient, HttpParams } from '@angular/common/http';
 
 @Injectable({
-  providedIn: "root",
+  providedIn: 'root',
 })
 export class BackendService {
-  private apiContencioso: string = "http://localhost:3000/api/v1/";
-    
+  private URL_API: string = 'http://localhost:3000/api/v1/';
+
   constructor(private http: HttpClient) {}
 
   public getData(endpoint: string) {
-    return this.http.get(this.apiContencioso + endpoint);
+    return this.http.get(this.URL_API + endpoint);
+  }
+
+  public getDataParams(endpoint: string, params: string) {
+    return this.http.get(this.URL_API + endpoint + params);
   }
 
   public postData(endpoint: string, body: any) {
-    return this.http.post(this.apiContencioso + endpoint, body);
+    return this.http.post(this.URL_API + endpoint, body);
   }
 
   public deleteData(endpoint: string, item: any) {
-    return this.http.delete(this.apiContencioso + endpoint + item);
+    return this.http.delete(this.URL_API + endpoint + item);
   }
 
   updateData(endpoint: string, data: any) {
-    return this.http.put(this.apiContencioso + endpoint, data);
+    return this.http.put(this.URL_API + endpoint, data);
   }
 }
