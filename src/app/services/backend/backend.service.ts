@@ -13,10 +13,6 @@ export class BackendService {
     return this.http.get(this.URL_API + endpoint);
   }
 
-  public getDataParams(endpoint: string, params: string) {
-    return this.http.get(this.URL_API + endpoint + params);
-  }
-
   public postData(endpoint: string, body: any) {
     return this.http.post(this.URL_API + endpoint, body);
   }

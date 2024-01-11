@@ -29,10 +29,11 @@ import { InputTextModule } from 'primeng/inputtext';
     SharedModule,
     FormsModule,
     ReactiveFormsModule,
+    //PRIMENG
     DialogModule,
     TableModule,
     MultiSelectModule,
-    InputTextModule 
+    InputTextModule,
   ],
 })
 export class ExercisesModule {}

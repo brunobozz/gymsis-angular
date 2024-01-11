@@ -1,3 +1,29 @@
+<section class="filters">
+  <div class="container mt-3">
+    <div class="p-inputgroup">
+      <span class="p-inputgroup-addon">
+        <i class="pi pi-search"></i>
+      </span>
+      <input
+        pInputText
+        #term
+        placeholder="Buscar Exercício"
+        (keyup)="filterByTerm(term.value)"
+      />
+    </div>
+  </div>
+
+  <div class="ps-3 pe-1 pt-3 pb-3 d-flex flex-nowrap scroll-y">
+    <div *ngFor="let category of categories" class="me-2">
+      <shared-category-icon
+        [category]="category"
+        size="32px"
+        (click)="filterByCategories(category.id)"
+      ></shared-category-icon>
+    </div>
+  </div>
+</section>
+
 <div class="container">
   <div class="card">
     <p-table
